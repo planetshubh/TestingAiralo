@@ -35,7 +35,6 @@ public class APITest {
         orderId = postResponse.jsonPath().getInt("data.id");
 
         Assert.assertEquals(metaMessage, "success", "Meta message should be 'success'");
-        Assert.assertNotNull(orderId, "Order ID should not be null");
     }
 
     @Test(priority = 2, dependsOnMethods = "createOrder") // to validate the order with the GET request
